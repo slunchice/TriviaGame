@@ -1,24 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Trivia Game</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+    <title>Trivia Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
 </head>
+
 <body>
 
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/> -->
     <div class="jumbotron" id="home">
-      <h1 class="display-3">Trivia Game!</h1>
-      <p class="lead">This is why you should download this fantastic app!</p>
-      <hr class="my-4">
+        <h1 class="display-3">Cat Trivia!</h1>
+        <p class="lead">Time remaining: Seconds</p>
 
+        <hr class="my-4">
+        <p class="lead">
+
+            <body>
+                <h2 class="quizHeader">Take a Quiz!</h2>
+
+                <div>
+                    <p class="question"> 1. Calico cats are almost always:</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q1" value="0">
+                        <label> Left pawed </label>
+
+                        <input class="answer" type="radio" name="q1" value="1">
+                        <label id="correctString1"> Female </label>
+
+                        <input class="answer" type="radio" name="q1" value="0">
+                        <label> Friendly </label>
+
+                        <input class="answer" type="radio" name="q1" value="0">
+                        <label> Finicky </label>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <p class="question"> 2. A group of cats is called a:</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q2" value="1">
+                        <label id="correctString2"> Clowder </label>
+
+                        <input class="answer" type="radio" name="q2" value="0">
+                        <label> Pack </label>
+
+                        <input class="answer" type="radio" name="q2" value="0">
+                        <label> Hoard </label>
+
+                        <input class="answer" type="radio" name="q2" value="0">
+                        <label> Nothing. Cats don’t congregate in group </label>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="question">3. Which of these is NOT a well known cat myth or saying?</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q3" value="0">
+                        <label> Cats always land on their feet </label>
+
+                        <input class="answer" type="radio" name="q3" value="0">
+                        <label> Cats have nine lives </label>
+
+                        <input class="answer" type="radio" name="q3" value="0">
+                        <label> It’s raining cats and dogs </label>
+
+                        <input class="answer" type="radio" name="q3" value="1">
+                        <label id="correctString3"> Don’t throw the cat out with the bath water </label>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="question">4. What is a cat doing when it’s "making biscuits"?</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q4" value="0">
+                        <label> Playing with bread dough </label>
+
+                        <input class="answer" type="radio" name="q4" value="1">
+                        <label id="correctString4"> Kneading with its paws </label>
+
+                        <input class="answer" type="radio" name="q4" value="0">
+                        <label> Training to be a chef </label>
+
+                        <input class="answer" type="radio" name="q4" value="1">
+                        <label id="correctString4"> Kneading with its paws </label>
+
+                        <input class="answer" type="radio" name="q4" value="0">
+                        <label> Auditing for a Food Network show </label>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="question"> 5. Hemingway Cats are felines that have: </p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q5" value="0">
+                        <label>Written a best-selling book </label>
+
+                        <input class="answer" type="radio" name="q5" value="0">
+                        <label> An abnormally large head </label>
+
+                        <input class="answer" type="radio" name="q5" value="0">
+                        <label> A cropped tail </label>
+                        <input class="answer" type="radio" name="q5" value="1">
+                        <label id="correctString5"> Extra toes </label>
+                    </ul>
+                </div>
+                <div>
+                    <p class="question"> 6. What is the scientific name for “Fear of Cats?"</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q6" value="0">
+                        <label> Felineophobia </label>
+
+                        <input class="answer" type="radio" name="q6" value="1">
+                        <label id="correctString6"> Ailurophobia </label>
+
+                        <input class="answer" type="radio" name="q6" value="0">
+                        <label> Get-it-away-ophobia </label>
+
+                        <input class="answer" type="radio" name="q6" value="0">
+                        <label>There isn’t one because it’s not a recognized fear.</label>
+                    </ul>
+                </div>
+
+
+                <div class="submitter">
+                    <input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit" />
+                </div>
+
+                <!--show only wrong answers on submit-->
+                <div class="quizAnswers" id="correctAnswer1"></div>
+                <div class="quizAnswers" id="correctAnswer2"></div>
+                <div class="quizAnswers" id="correctAnswer3"></div>
+                <div class="quizAnswers" id="correctAnswer4"></div>
+                <div class="quizAnswers" id="correctAnswer5"></div>
+                <div class="quizAnswers" id="correctAnswer6"></div>
+
+                <!--show score upon submit-->
+                <div>
+                    <h2 class="quizScore" id="userScore"></h2>
+                </div>
     </div>
 
+    </body>
+
+
 </body>
+
 </html>
